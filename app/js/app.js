@@ -36,11 +36,11 @@ App.run(["$rootScope", "$state", "$stateParams",  '$window', '$templateCache', f
   $rootScope.$storage = $window.localStorage;
 
   // Uncomment this to disable template cache
-  /*$rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
+  $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
       if (typeof(toState) !== 'undefined'){
         $templateCache.remove(toState.templateUrl);
       }
-  });*/
+  });
 
   // Scope Globals
   // ----------------------------------- 
@@ -84,7 +84,7 @@ function ($stateProvider, $locationProvider, $urlRouterProvider, helper) {
   $locationProvider.html5Mode(false);
 
   // defaults to dashboard
-  $urlRouterProvider.otherwise('/app/dashboard');
+  $urlRouterProvider.otherwise('/page/login');
 
   // 
   // Application Routes
@@ -810,6 +810,7 @@ App.controller('LoginFormController', ['$scope', '$http', '$state', function($sc
             $state.go('app.dashboard');
           }
         }, function(x) {
+          console.log($scope.account);
           $scope.authMsg = 'Server Request Error';
         });
     }

@@ -26,6 +26,7 @@ App.controller('LoginFormController', ['$scope', '$http', '$state', function($sc
             $state.go('app.dashboard');
           }
         }, function(x) {
+          console.log($scope.account);
           $scope.authMsg = 'Server Request Error';
         });
     }
