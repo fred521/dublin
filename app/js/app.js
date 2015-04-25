@@ -262,6 +262,12 @@ function ($stateProvider, $locationProvider, $urlRouterProvider, helper) {
         templateUrl: helper.basepath('form-extended.html'),
         resolve: helper.resolveFor('codemirror', 'moment', 'taginput','inputmask','localytics.directives', 'ui.bootstrap-slider', 'ngWig', 'filestyle', 'textAngular', 'textAngularSetup')
     })
+    .state('app.new-product', {
+        url: '/newProduct',
+        title: 'Add A New Product',
+        templateUrl: helper.basepath('newProduct.html'),
+        resolve: helper.resolveFor('codemirror', 'moment', 'taginput','inputmask','localytics.directives', 'ui.bootstrap-slider', 'ngWig', 'filestyle', 'textAngular', 'textAngularSetup')
+    })
     .state('app.form-validation', {
         url: '/form-validation',
         title: 'Form Validation',
@@ -800,7 +806,7 @@ App.controller('LoginFormController', ['$scope', '$http', '$state', function($sc
     if($scope.loginForm.$valid) {
 
       $http
-        .post('api/account/login', {email: $scope.account.email, password: $scope.account.password})
+        .post('http://localhost:4567/login', {email: $scope.account.email, password: $scope.account.password})
         .then(function(response) {
           // assumes if ok, response is an object with some data, if not, a string with error
           // customize according to your api
@@ -810,7 +816,7 @@ App.controller('LoginFormController', ['$scope', '$http', '$state', function($sc
             $state.go('app.dashboard');
           }
         }, function(x) {
-          console.log($scope.account);
+          //console.log("Dublin Client send user information...",$scope.account);
           $scope.authMsg = 'Server Request Error';
         });
     }

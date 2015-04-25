@@ -11,7 +11,8 @@
     "icon": "icon-note",
     "submenu": [
       {"text": "Standard",    "sref": "app.form-standard", "translate": "sidebar.nav.form.STANDARD" },
-      {"text": "Extended",    "sref": "app.form-extended", "translate": "sidebar.nav.form.EXTENDED" }
+      {"text": "Extended",    "sref": "app.form-extended", "translate": "sidebar.nav.form.EXTENDED" },
+      {"text": "New Product",    "sref": "app.new-product", "translate": "sidebar.nav.product.NEW_PRODUCT" }
     ],
     "translate": "sidebar.nav.form.FORM"
   },

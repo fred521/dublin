@@ -16,7 +16,7 @@ App.controller('LoginFormController', ['$scope', '$http', '$state', function($sc
     if($scope.loginForm.$valid) {
 
       $http
-        .post('api/account/login', {email: $scope.account.email, password: $scope.account.password})
+        .post('http://localhost:4567/login', {email: $scope.account.email, password: $scope.account.password})
         .then(function(response) {
           // assumes if ok, response is an object with some data, if not, a string with error
           // customize according to your api
@@ -26,7 +26,7 @@ App.controller('LoginFormController', ['$scope', '$http', '$state', function($sc
             $state.go('app.dashboard');
           }
         }, function(x) {
-          console.log($scope.account);
+          //console.log("Dublin Client send user information...",$scope.account);
           $scope.authMsg = 'Server Request Error';
         });
     }

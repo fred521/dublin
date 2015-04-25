@@ -45,6 +45,9 @@
       "WIDGETS": "Widgets",
       "WIDGETS": "Widgets",
       "DOCUMENTATION": "Documentation",
+      "product": {
+        "NEW_PRODUCT": "New Product"
+      },
       "element": {
         "ELEMENTS": "Elements",
         "BUTTON": "Button",

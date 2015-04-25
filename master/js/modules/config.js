@@ -190,6 +190,12 @@ function ($stateProvider, $locationProvider, $urlRouterProvider, helper) {
         templateUrl: helper.basepath('form-extended.html'),
         resolve: helper.resolveFor('codemirror', 'moment', 'taginput','inputmask','localytics.directives', 'ui.bootstrap-slider', 'ngWig', 'filestyle', 'textAngular', 'textAngularSetup')
     })
+    .state('app.new-product', {
+        url: '/newProduct',
+        title: 'Add A New Product',
+        templateUrl: helper.basepath('newProduct.html'),
+        resolve: helper.resolveFor('codemirror', 'moment', 'taginput','inputmask','localytics.directives', 'ui.bootstrap-slider', 'ngWig', 'filestyle', 'textAngular', 'textAngularSetup')
+    })
     .state('app.form-validation', {
         url: '/form-validation',
         title: 'Form Validation',
