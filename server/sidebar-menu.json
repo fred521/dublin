@@ -6,6 +6,62 @@
   },
 
   {
+    "text": "User",
+    "sref": "#",
+    "icon": "icon-note",
+    "submenu": [
+      {"text": "New User",    "sref": "app.new-user", "translate": "sidebar.nav.user.NEW_USER" },
+      {"text": "Update User",    "sref": "app.update-user", "translate": "sidebar.nav.user.UPDATE_USER" },
+      {"text": "List User",    "sref": "app.list-user", "translate": "sidebar.nav.user.LIST_USER" }
+    ],
+    "translate": "sidebar.nav.user.USER"
+  },
+
+  {
+    "text": "Product",
+    "sref": "#",
+    "icon": "icon-note",
+    "submenu": [
+      {"text": "New Product",    "sref": "app.new-product", "translate": "sidebar.nav.product.NEW_PRODUCT" },
+      {"text": "Update Product",    "sref": "app.update-product", "translate": "sidebar.nav.product.UPDATE_PRODUCT" },
+      {"text": "List Product",    "sref": "app.list-product", "translate": "sidebar.nav.product.LIST_PRODUCT" }
+    ],
+    "translate": "sidebar.nav.product.PRODUCT"
+  },
+  {
+    "text": "Order",
+    "sref": "#",
+    "icon": "icon-note",
+    "submenu": [
+      {"text": "New Order",    "sref": "app.new-order", "translate": "sidebar.nav.order.NEW_ORDER" },
+      {"text": "Update Order",    "sref": "app.update-order", "translate": "sidebar.nav.order.UPDATE_ORDER" },
+      {"text": "List Order",    "sref": "app.list-order", "translate": "sidebar.nav.order.LIST_ORDER" }
+    ],
+    "translate": "sidebar.nav.order.ORDER"
+  },
+  {
+    "text": "Address",
+    "sref": "#",
+    "icon": "icon-note",
+    "submenu": [
+      {"text": "New Address",    "sref": "app.new-address", "translate": "sidebar.nav.address.NEW_ADDRESS" },
+      {"text": "Update Address",    "sref": "app.update-address", "translate": "sidebar.nav.address.UPDATE_ADDRESS" },
+      {"text": "List Address",    "sref": "app.list-address", "translate": "sidebar.nav.address.LIST_ADDRESS" }
+    ],
+    "translate": "sidebar.nav.address.ADDRESS"
+  },
+  {
+    "text": "Din",
+    "sref": "#",
+    "icon": "icon-note",
+    "submenu": [
+      {"text": "New Din",    "sref": "app.new-din", "translate": "sidebar.nav.din.NEW_DIN" },
+      {"text": "Update Din",    "sref": "app.update-din", "translate": "sidebar.nav.din.UPDATE_DIN" },
+      {"text": "List Din",    "sref": "app.list-din", "translate": "sidebar.nav.din.LIST_DIN" }
+    ],
+    "translate": "sidebar.nav.din.DIN"
+  },
+  {
     "text": "Forms",
     "sref": "#",
     "icon": "icon-note",

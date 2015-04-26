@@ -1,0 +1,135 @@
+<h3>Add New Order</h3>
+<div ng-controller="TablexEditableController" class="container-fluid">
+   <div class="row">
+      <div class="col-lg-12">
+         <div class="form-group mb-xl">
+            <input type="text" placeholder="Search products, product, etc." class="form-control mb" />
+            <div class="clearfix">
+               <button type="button" ng-click="addProduct()" class="pull-left btn btn-default">Add</button>
+               <div class="pull-right">
+                  <label class="checkbox-inline c-checkbox">
+                     <input id="inlineCheckbox10" type="checkbox" value="option1" checked="checked" />
+                     <span class="fa fa-check"></span>Products</label>
+                  <label class="checkbox-inline c-checkbox">
+                     <input id="inlineCheckbox20" type="checkbox" value="option2" />
+                     <span class="fa fa-check"></span>Users</label>
+                  <label class="checkbox-inline c-checkbox">
+                     <input id="inlineCheckbox30" type="checkbox" value="option3" />
+                     <span class="fa fa-check"></span>Apps</label>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- Editable row-->
+   <h4 class="page-header">List Product</h4>
+   <table class="table table-bordered table-hover bg-white">
+      <tr style="font-weight: bold">
+         <td style="width:35%">产品名称</td>
+         <td style="width:20%">产品数量</td>
+         <td style="width:20%">价格</td>
+         <td style="width:20%">Location</td>
+         <td style="width:25%">Edit</td>
+      </tr>
+      <tr ng-repeat="product in products">
+         <td>
+            <!-- editable product name (text with validation)-->
+            <span editable-text="product.name" e-name="name" e-form="rowform" e-required="">{{ product.name || &apos;empty&apos; }}</span>
+         </td>
+         <td>
+            <!-- editable  quantity(text with validation)-->
+            <span editable-text="product.quantity" e-name="quantity" e-form="rowform" e-required="">{{ product.quantity || &apos;empty&apos; }}</span>
+         </td>
+         <td>
+            <!-- editable price (select-local)-->
+            <span editable-text="product.price" e-name="price" e-form="rowform" e-required="">{{ product.price || &apos;empty&apos; }}</span>
+         </td>
+         <td>
+            <!-- editable group (select-local)-->
+            <span editable-select="product.location" e-name="location" e-form="rowform" e-ng-options="s.value as s.text for s in locations">{{ showLocation(product) }}</span>
+            <!--span(editable-select='user.status',      e-name='status',   e-form='rowform', e-ng-options='s.value as s.text for s in statuses')  {{ showStatus(user) }}        -->
+         </td>
+         <td style="white-space: nowrap">
+            <!-- form-->
+            <form editable-form="" name="rowform" onbeforesave="saveProduct($data, product.id)" ng-show="rowform.$visible" shown="inserted == product" class="form-buttons form-inline">
+               <button type="submit" ng-disabled="rowform.$waiting" title="Save" class="btn btn-sm btn-info">
+                  <em class="fa fa-save"></em>
+               </button>
+               <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" title="Cancel" class="btn btn-sm btn-default">
+                  <em class="fa fa-times"></em>
+               </button>
+            </form>
+            <div ng-show="!rowform.$visible" class="buttons">
+               <button ng-click="rowform.$show()" title="Edit" class="btn btn-sm btn-info">
+                  <em class="fa fa-pencil"></em>
+               </button>
+               <button ng-click="removeProduct($index)" title="Delete" class="btn btn-sm btn-danger">
+                  <em class="fa fa-trash"></em>
+               </button>
+            </div>
+         </td>
+      </tr>
+   </table>
+   <div class="row">
+      <div class="col-lg-12">
+         <div class="form-group mb-xl">
+            <input type="text" placeholder="Search products, product, etc." class="form-control mb" />
+            <div class="clearfix">
+               <button type="button" ng-click="addProduct()" class="pull-left btn btn-default">Add</button>
+               <div class="pull-right">
+                  <label class="checkbox-inline c-checkbox">
+                     <input id="inlineCheckbox10" type="checkbox" value="option1" checked="checked" />
+                     <span class="fa fa-check"></span>Products</label>
+                  <label class="checkbox-inline c-checkbox">
+                     <input id="inlineCheckbox20" type="checkbox" value="option2" />
+                     <span class="fa fa-check"></span>Users</label>
+                  <label class="checkbox-inline c-checkbox">
+                     <input id="inlineCheckbox30" type="checkbox" value="option3" />
+                     <span class="fa fa-check"></span>Apps</label>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col-lg-12">
+         <div class="panel panel-default">
+            <div class="panel-body">
+               <div class="text-center">
+                  <h3 class="mt0">Ted Berry</h3>
+                  <p>Lead director</p>
+               </div>
+               <hr/>
+               <ul class="list-unstyled ph-xl">
+                  <li>
+                     <em class="fa fa-home fa-fw mr-lg"></em>Somewhere, Neverland</li>
+                  <li>
+                     <em class="fa fa-briefcase fa-fw mr-lg"></em><a href="#">Themicon.co</a>
+                  </li>
+                  <li>
+                     <em class="fa fa-graduation-cap fa-fw mr-lg"></em>Master Designer</li>
+               </ul>
+               <hr/>
+               <label>邮寄地址:</label>
+               <div class="form-group"></div>
+               <select id="input-id-1" name="brand" class="form-control">
+                  <option>address1</option>
+                  <option>address2</option>
+                  <option>address3</option>
+                  <option>address4</option>
+               </select>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="row">
+      <fieldset>
+         <div class="form-group">
+            <div class="col-sm-4 col-sm-offset-10">
+               <button type="submit" class="btn btn-default">Cancel</button>
+               <button type="submit" class="btn btn-primary">提交订单</button>
+            </div>
+         </div>
+      </fieldset>
+   </div>
+</div>

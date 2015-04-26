@@ -46,7 +46,34 @@
       "WIDGETS": "Widgets",
       "DOCUMENTATION": "Documentation",
       "product": {
-        "NEW_PRODUCT": "New Product"
+        "PRODUCT": "Product",
+        "NEW_PRODUCT": "New Product",
+        "UPDATE_PRODUCT": "Update Product",
+        "LIST_PRODUCT": "List Product"
+      },
+      "order": {
+        "ORDER": "Order",
+        "NEW_ORDER": "New Order",
+        "UPDATE_ORDER": "Update Order",
+        "LIST_ORDER": "List Order"
+      },
+      "din": {
+        "DIN": "Din",
+        "NEW_DIN": "New Din",
+        "UPDATE_DIN": "Update Din",
+        "LIST_DIN": "List Din"
+      },
+      "user": {
+        "USER": "User",
+        "NEW_USER": "New User",
+        "UPDATE_USER": "Update User",
+        "LIST_USER": "List User"
+      },
+      "address": {
+        "ADDRESS": "Address",
+        "NEW_ADDRESS": "New Address",
+        "UPDATE_ADDRESS": "Update Address",
+        "LIST_ADDRESS": "List Address"
       },
       "element": {
         "ELEMENTS": "Elements",

@@ -196,6 +196,72 @@ function ($stateProvider, $locationProvider, $urlRouterProvider, helper) {
         templateUrl: helper.basepath('newProduct.html'),
         resolve: helper.resolveFor('codemirror', 'moment', 'taginput','inputmask','localytics.directives', 'ui.bootstrap-slider', 'ngWig', 'filestyle', 'textAngular', 'textAngularSetup')
     })
+    .state('app.update-product', {
+        url: '/updateProduct',
+        title: 'Update A Exist Product',
+        templateUrl: helper.basepath('updateProduct.html'),
+        resolve: helper.resolveFor('codemirror', 'moment', 'taginput','inputmask','localytics.directives', 'ui.bootstrap-slider', 'ngWig', 'filestyle', 'textAngular', 'textAngularSetup')
+    })
+    .state('app.list-product', {
+        url: '/listProduct',
+        title: 'List Product',
+        templateUrl: helper.basepath('listProduct.html'),
+        resolve: helper.resolveFor('codemirror', 'moment', 'taginput','inputmask','localytics.directives', 'ui.bootstrap-slider', 'ngWig', 'filestyle', 'textAngular', 'textAngularSetup')
+    })
+    .state('app.new-order', {
+        url: '/newOrder',
+        title: 'Add A New Order',
+        templateUrl: helper.basepath('newOrder.html'),
+        resolve: helper.resolveFor('codemirror', 'moment', 'taginput','inputmask','localytics.directives', 'ui.bootstrap-slider', 'ngWig', 'filestyle', 'textAngular', 'textAngularSetup', 'xeditable')
+    })
+    .state('app.update-order', {
+        url: '/updateOrder',
+        title: 'Update A Exist Order',
+        templateUrl: helper.basepath('updateOrder.html'),
+        resolve: helper.resolveFor('codemirror', 'moment', 'taginput','inputmask','localytics.directives', 'ui.bootstrap-slider', 'ngWig', 'filestyle', 'textAngular', 'textAngularSetup')
+    })
+    .state('app.list-order', {
+        url: '/listOrder',
+        title: 'List Order',
+        templateUrl: helper.basepath('listOrder.html'),
+        resolve: helper.resolveFor('codemirror', 'moment', 'taginput','inputmask','localytics.directives', 'ui.bootstrap-slider', 'ngWig', 'filestyle', 'textAngular', 'textAngularSetup')
+    })
+    .state('app.new-user', {
+        url: '/newUser',
+        title: 'Add A New User',
+        templateUrl: helper.basepath('newUser.html'),
+        resolve: helper.resolveFor('codemirror', 'moment', 'taginput','inputmask','localytics.directives', 'ui.bootstrap-slider', 'ngWig', 'filestyle', 'textAngular', 'textAngularSetup')
+    })
+    .state('app.update-user', {
+        url: '/updateUser',
+        title: 'Update A Exist User',
+        templateUrl: helper.basepath('updateUser.html'),
+        resolve: helper.resolveFor('codemirror', 'moment', 'taginput','inputmask','localytics.directives', 'ui.bootstrap-slider', 'ngWig', 'filestyle', 'textAngular', 'textAngularSetup')
+    })
+    .state('app.list-user', {
+        url: '/listUser',
+        title: 'List User',
+        templateUrl: helper.basepath('listUser.html'),
+        resolve: helper.resolveFor('codemirror', 'moment', 'taginput','inputmask','localytics.directives', 'ui.bootstrap-slider', 'ngWig', 'filestyle', 'textAngular', 'textAngularSetup')
+    })
+    .state('app.new-din', {
+        url: '/newDin',
+        title: 'Add A New Din',
+        templateUrl: helper.basepath('newDin.html'),
+        resolve: helper.resolveFor('codemirror', 'moment', 'taginput','inputmask','localytics.directives', 'ui.bootstrap-slider', 'ngWig', 'filestyle', 'textAngular', 'textAngularSetup')
+    })
+    .state('app.update-din', {
+        url: '/updateUser',
+        title: 'Update A Exist Din',
+        templateUrl: helper.basepath('updateDin.html'),
+        resolve: helper.resolveFor('codemirror', 'moment', 'taginput','inputmask','localytics.directives', 'ui.bootstrap-slider', 'ngWig', 'filestyle', 'textAngular', 'textAngularSetup')
+    })
+    .state('app.list-din', {
+        url: '/listDin',
+        title: 'List Din',
+        templateUrl: helper.basepath('listDin.html'),
+        resolve: helper.resolveFor('codemirror', 'moment', 'taginput','inputmask','localytics.directives', 'ui.bootstrap-slider', 'ngWig', 'filestyle', 'textAngular', 'textAngularSetup')
+    })
     .state('app.form-validation', {
         url: '/form-validation',
         title: 'Form Validation',

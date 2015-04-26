@@ -1,0 +1,50 @@
+h3 List Product
+
+.container-fluid(ng-controller="DataTableController")
+
+  // START DATATABLE 2 产品名称
+  .row
+    .col-lg-12
+      .panel.panel-default
+        .panel-heading 
+        .panel-body
+          table#datatable2.table.table-striped.table-hover
+            thead
+              tr
+                th 产品名称
+                th.sort-numeric 价格
+                th 访问量
+                th.sort-numeric 数量
+                th 状态
+                th 产品Code
+                th 品牌
+                th Location
+            tbody
+              tr.gradeX
+                td Trident
+                td Internet Explorer 4.0
+                td 10000
+                td Win 95+
+                td 4
+                td X
+                td X
+                td hangzhou
+            tfoot
+              tr
+                th
+                  input.form-control.input-sm.datatable_input_col_search(type='text', name='filter_rendering_engine', placeholder='Filter Rendering engine')
+                th
+                  input.form-control.input-sm.datatable_input_col_search(type='text', name='filter_browser', placeholder='Filter Browser')
+                th
+                  input.form-control.input-sm.datatable_input_col_search(type='text', name='filter_browser', placeholder='Filter Browser')
+                th
+                  input.form-control.input-sm.datatable_input_col_search(type='text', name='filter_platform', placeholder='Filter Platform')
+                th
+                  input.form-control.input-sm.datatable_input_col_search(type='text', name='filter_engine_version', placeholder='Filter Engine version')
+                th
+                  input.form-control.input-sm.datatable_input_col_search(type='text', name='filter_css_grade', placeholder='Filter CSS grade')
+                th
+                  input.form-control.input-sm.datatable_input_col_search(type='text', name='filter_css_grade', placeholder='Filter CSS grade')
+                th
+                  input.form-control.input-sm.datatable_input_col_search(type='text', name='filter_css_grade', placeholder='Filter CSS grade')
+  // END DATATABLE 2 
