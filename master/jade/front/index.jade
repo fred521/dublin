@@ -1,0 +1,1117 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    |     
+    title Limo - HTML5 E-Commerce Template
+    // SEO Meta Tags
+    meta(name='description', content='Responsive HTML5 E-Commerce Template')
+    | &#x9;&#x9;
+    meta(name='keywords', content='responsive html5 template, e-commerce, shop, bootstrap 3.0, css, jquery, flat, modern')
+    | &#x9;&#x9;
+    meta(name='author', content='8Guild')
+    // Mobile Specific Meta Tag
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+    // Favicon
+    link(rel='shortcut icon', href='favicon.ico', type='image/x-icon')
+    |     
+    link(rel='icon', href='favicon.ico', type='image/x-icon')
+    // Master Slider Styles
+    link(href='masterslider/style/masterslider.css', rel='stylesheet', media='screen')
+    // Styles
+    link(href='css/styles.css', rel='stylesheet', media='screen')
+    // Modernizr
+    script(src='js/libs/modernizr.custom.js')
+    // Adding Media Queries Support for IE8
+    //if lt IE 9
+      script(src='js/plugins/respond.js')
+  // Body
+  body
+    // Login Modal
+    #loginModal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal', aria-hidden='true')
+              i.fa.fa-times
+            |             
+            h2
+              | Login or 
+              a(href='register.html') Register
+            |             
+            p.large Use social accounts
+            |             
+            .social-login
+              a.facebook(href='#')
+                i.fa.fa-facebook-square
+              |             &#x9;
+              a.google(href='#')
+                i.fa.fa-google-plus-square
+              |             &#x9;
+              a.twitter(href='#')
+                i.fa.fa-twitter-square
+          |           
+          .modal-body
+            form.login-form
+              .form-group.group
+                label(for='log-email') Email
+                |               
+                input#log-email.form-control(type='email', name='log-email', placeholder='Enter your email', required='')
+                |               
+                a.help-link(href='#') Forgot email?
+              |             
+              .form-group.group
+                label(for='log-password') Password
+                |               
+                input#log-password.form-control(type='text', name='log-password', placeholder='Enter your password', required='')
+                |               
+                a.help-link(href='#') Forgot password?
+              |             
+              .checkbox
+                label
+                  input(type='checkbox', name='remember')
+                  |  Remember me
+              |             
+              input.btn.btn-black(type='submit', value='Login')
+        // /.modal-content
+      // /.modal-dialog
+    // /.modal
+    // Header
+    header(data-offset-top='500', data-stuck='600')
+      // data-offset-top is when header converts to small variant and data-stuck when it becomes visible. Values in px represent position of scroll from top. Make sure there is at least 100px between those two values for smooth animation
+      // Search Form
+      form.search-form.closed(method='get', role='form', autocomplete='off')
+        .container
+          .close-search
+            i.icon-delete
+          |             
+          .form-group
+            label.sr-only(for='search-hd') Search for product
+            |               
+            input#search-hd.form-control(type='text', name='search-hd', placeholder='Search for product')
+            |               
+            button(type='submit')
+              i.icon-magnifier
+      // Mobile Menu Toggle
+      .menu-toggle
+        i.fa.fa-list
+      |       
+      .container
+        a.logo(href='index.html')
+          img(src='img/logo-scheme4.png', alt='Limo')
+      // Main Menu
+      nav.menu
+        .container
+          ul.main
+            li.has-submenu
+              a(href='index.html')
+                span H
+                | ome
+                i.fa.fa-chevron-down
+              // Class "has-submenu" for proper highlighting and dropdown
+              ul.submenu
+                li
+                  a(href='index.html') Home - Slideshow
+                |               &#x9;
+                li
+                  a(href='home-fullscreen.html') Home - Fullscreen Slider
+                |               &#x9;
+                li
+                  a(href='home-showcase.html') Home - Product Showcase
+                |               &#x9;
+                li
+                  a(href='home-categories.html') Home - Categories Slider
+                |               &#x9;
+                li
+                  a(href='home-offers.html') Home - Special Offers
+            |           &#x9;
+            li.has-submenu
+              a(href='shop-filters-left-3cols.html')
+                span S
+                | hop
+                i.fa.fa-chevron-down
+              |             &#x9;
+              ul.submenu
+                li
+                  a(href='shop-filters-left-3cols.html') Shop - Filters Left 3 Cols
+                |               &#x9;
+                li
+                  a(href='shop-filters-left-2cols.html') Shop - Filters Left 2 Cols
+                |               &#x9;
+                li
+                  a(href='shop-filters-right-3cols.html') Shop - Filters Right 3 Cols
+                |               &#x9;
+                li
+                  a(href='shop-filters-right-2cols.html') Shop - Filters Right 2 Cols
+                |               &#x9;
+                li
+                  a(href='shop-no-filters-4cols.html') Shop - No Filters 4 Cols
+                |               &#x9;
+                li
+                  a(href='shop-no-filters-3cols.html') Shop - No Filters 3 Cols
+                |                 
+                li
+                  a(href='shop-single-item-v1.html') Shop - Single Item Vers 1
+                |                 
+                li
+                  a(href='shop-single-item-v2.html') Shop - Single Item Vers 2
+                |                 
+                li
+                  a(href='shopping-cart.html') Shopping Cart
+                |                 
+                li
+                  a(href='checkout.html') Checkout Page
+                |                 
+                li
+                  a(href='wishlist.html') Wishlist
+            |           &#x9;
+            li.has-submenu
+              a(href='blog-sidebar-right.html')
+                span B
+                | log
+                i.fa.fa-chevron-down
+              |             &#x9;
+              ul.submenu
+                li
+                  a(href='blog-sidebar-left.html') Blog - Sidebar Left
+                |               &#x9;
+                li
+                  a(href='blog-sidebar-right.html') Blog - Sidebar Right
+                |               &#x9;
+                li
+                  a(href='blog-single.html') Blog - Single Post
+            |           &#x9;
+            li.has-submenu
+              a(href='#')
+                span P
+                | ages
+                i.fa.fa-chevron-down
+              |             &#x9;
+              ul.submenu
+                li
+                  a(href='register.html') Login / Registration
+                |                 
+                li
+                  a(href='about.html') About Us
+                |                 
+                li
+                  a(href='contacts.html') Contacts
+                |                 
+                li
+                  a(href='coming-soon.html') Coming Soon
+                |                 
+                li
+                  a(href='404.html') 404 Page
+                |                 
+                li
+                  a(href='support.html') Support Page
+                |                 
+                li
+                  a(href='delivery.html') Delivery
+                |                 
+                li
+                  a(href='history.html') History Page
+                |                 
+                li
+                  a(href='tracking.html') Tracking Page
+                |                 
+                li
+                  a(href='cs-page.html') Components &amp; Styles
+            |           &#x9;
+            li.hide-sm
+              a(href='support.html')
+                span S
+                | upport
+        |         
+        .catalog-block
+          .container
+            ul.catalog
+              li.has-submenu
+                a(href='shop-filters-left-3cols.html')
+                  | Handbag
+                  i.fa.fa-chevron-down
+                |               &#x9;
+                ul.submenu
+                  li
+                    a(href='#') Wristlet
+                  |                 &#x9;
+                  li.has-submenu
+                    a(href='#') Backpack
+                    // Class "has-submenu" for adding carret and dropdown
+                    ul.sub-submenu
+                      li
+                        a(href='#') KATA
+                      |                       
+                      li
+                        a(href='#') Think Tank
+                      |                       
+                      li
+                        a(href='#') Manfrotto
+                      |                       
+                      li
+                        a(href='#') Lowepro
+                  |                 &#x9;
+                  li
+                    a(href='#') Hat box
+                  |                 &#x9;
+                  li.has-submenu
+                    a(href='#') Clutch
+                    |                   &#x9;
+                    ul.sub-submenu
+                      li
+                        a(href='#') Louis Vuitton
+                      |                       
+                      li
+                        a(href='#') Chanel
+                      |                       
+                      li
+                        a(href='#') Christian Dior
+                      |                       
+                      li
+                        a(href='#') Gucci
+                      |                       
+                      li
+                        a(href='#') Neri Karra
+                  |                 &#x9;
+                  li
+                    a(href='#') Envelope
+                  |                   
+                  li.offer
+                    .col-1
+                      p.p-style2
+                        | Use product images on the menu. It&apos;s easier to percept a visual content than a textual one.
+                    |                     
+                    .col-2
+                      img(src='img/offers/menu-drodown-offer.jpg', alt='Special Offer')
+                      |                     &#x9;
+                      a.btn.btn-black(href='#')
+                        span 584$
+                        | Special offer
+              |             &#x9;
+              li
+                a(href='shop-filters-left-3cols.html') Wallet
+              |             &#x9;
+              li
+                a(href='shop-filters-left-3cols.html') Satchel
+              |             &#x9;
+              li
+                a(href='shop-filters-left-3cols.html') Clutch
+              |             &#x9;
+              li
+                a(href='shop-filters-left-3cols.html') Hobo bags
+              |               
+              li
+                a(href='shop-filters-left-3cols.html') Shoulder Bag
+      |       
+      |       
+      .toolbar-container
+        .container
+          // Toolbar
+          .toolbar.group
+            a.login-btn.btn-outlined-invert(href='#', data-toggle='modal', data-target='#loginModal')
+              i.icon-profile
+              |  
+              span
+                b L
+                | ogin
+            |             
+            a.btn-outlined-invert(href='wishlist.html')
+              i.icon-heart
+              |  
+              span
+                b W
+                | ishlist
+            |    
+            |             
+            .cart-btn
+              a.btn.btn-outlined-invert(href='shopping-cart.html')
+                i.icon-shopping-cart-content
+                span 3
+                b 36 5654
+              // Cart Dropdown
+              .cart-dropdown
+                span
+                // Small rectangle to overlap Cart button
+                .body
+                  table
+                    tr
+                      th Items
+                      |                       
+                      th Quantity
+                      |                       
+                      th Price
+                    |                     
+                    tr.item
+                      td
+                        .delete
+                        a(href='#') Good Joo-Joo Surfb
+                      |                       
+                      td
+                        input(type='text', value='1')
+                      |                       
+                      td.price 89 005 $
+                    |                     
+                    tr.item
+                      td
+                        .delete
+                        a(href='#') Good Joo-Joo Item
+                      |                       
+                      td
+                        input(type='text', value='2')
+                      |                       
+                      td.price 4 300 $
+                    |                     
+                    tr.item
+                      td
+                        .delete
+                        a(href='#') Good Joo-Joo
+                      |                       
+                      td
+                        input(type='text', value='5')
+                      |                       
+                      td.price 84 $
+                |                 
+                .footer.group
+                  .buttons
+                    a.btn.btn-outlined-invert(href='checkout.html')
+                      i.icon-download
+                      | Checkout
+                    |                     
+                    a.btn.btn-outlined-invert(href='shopping-cart.html')
+                      i.icon-shopping-cart-content
+                      | To cart
+                  |                   
+                  .total 93 389 $
+              // Cart Dropdown Close
+            |             
+            button.search-btn.btn-outlined-invert
+              i.icon-magnifier
+          // Toolbar Close
+    // Header Close
+    // Page Content
+    .page-content
+      // Hero Slider
+      section.hero-slider
+        #hero-slider.master-slider
+          // Slide 1
+          .ms-slide(data-delay='7')
+            .overlay
+            |           &#x9;
+            img(src='masterslider/blank.gif', data-src='img/hero/slideshow/slide_1.jpg', alt='')
+            |             
+            h2.dark-color.ms-layer(style='width: 456px; left: 110px; top: 110px;', data-effect='top(50,true)', data-duration='700', data-delay='250', data-ease='easeOutQuad') Look for all bags at our shop!
+            |             
+            p.dark-color.ms-layer(style='width: 456px; left: 110px; top: 210px;', data-effect='back(500)', data-duration='700', data-delay='500', data-ease='easeOutQuad')
+              | In this slider (which works both on touch screen and desktop devices) you can change the title, the description and button texts. It&apos;s all that you need to demonstrate your top rated products.
+            |             
+            .ms-layer.button(style='left: 110px; top: 300px;', data-effect='left(50,true)', data-duration='500', data-delay='750', data-ease='easeOutQuad')
+              a.btn.btn-black(href='#') Go to catalog
+            |             
+            .ms-layer.button(style='left: 350px; top: 300px;', data-effect='bottom(50,true)', data-duration='700', data-delay='950', data-ease='easeOutQuad')
+              a.btn.btn-primary(href='#') Browse all
+          // Slide 2
+          .ms-slide(data-delay='7')
+            span.overlay
+            |           &#x9;
+            img(src='masterslider/blank.gif', data-src='img/hero/slideshow/slide_2.jpg', alt='Necessaire')
+            |             
+            h2.dark-color.ms-layer(style='width: 456px; left: 110px; top: 110px;', data-effect='bottom(50,true)', data-duration='700', data-delay='250', data-ease='easeOutQuad') Necessaire
+            |             
+            p.dark-color.ms-layer(style='width: 456px; left: 110px; top: 210px;', data-effect='bottom(50,true)', data-duration='700', data-delay='500', data-ease='easeOutQuad')
+              | In this slider (which works both on touch screen and desktop devices) you can change the title, the description and button texts. It&apos;s all that you need to demonstrate your top rated products.
+            |             
+            .ms-layer.button(style='left: 110px; top: 330px;', data-effect='left(50,true)', data-duration='500', data-delay='750', data-ease='easeOutQuad')
+              a.btn.btn-black(href='#') Go to catalog
+            |             
+            .ms-layer.button(style='left: 350px; top: 330px;', data-effect='bottom(50,true)', data-duration='700', data-delay='950', data-ease='easeOutQuad')
+              a.btn.btn-primary(href='#') Browse all
+          // Slide 3
+          .ms-slide(data-delay='7')
+            .overlay
+            |           &#x9;
+            img(src='masterslider/blank.gif', data-src='img/hero/slideshow/slide_2.jpg', alt='Crescent')
+            |             
+            h2.dark-color.ms-layer(style='width: 456px; left: 110px; top: 110px;', data-effect='left(50,true)', data-duration='700', data-delay='250', data-ease='easeOutQuad') Crescent
+            |             
+            p.dark-color.ms-layer(style='width: 456px; left: 110px; top: 210px;', data-effect='left(50,true)', data-duration='700', data-delay='500', data-ease='easeOutQuad')
+              | In this slider (which works both on touch screen and desktop devices) you can change the title, the description and button texts. It&apos;s all that you need to demonstrate your top rated products.
+            |             
+            .ms-layer.button(style='left: 110px; top: 330px;', data-effect='left(50,true)', data-duration='500', data-delay='750', data-ease='easeOutQuad')
+              a.btn.btn-black(href='#') Go to catalog
+            |             
+            .ms-layer.button(style='left: 350px; top: 330px;', data-effect='bottom(50,true)', data-duration='700', data-delay='950', data-ease='easeOutQuad')
+              a.btn.btn-primary(href='#') Browse all
+      // Hero Slider Close
+      // Categories
+      section.cat-tiles
+        .container
+          h2 Browse categories
+          |         &#x9;
+          .row
+            // Category
+            .category.col-lg-2.col-md-2.col-sm-4.col-xs-6
+              a(href='#')
+                img(src='img/categories/1.png', alt='1')
+                |                 
+                p Leather belt
+            // Category
+            .category.col-lg-2.col-md-2.col-sm-4.col-xs-6
+              a(href='#')
+                img(src='img/categories/1.png', alt='1')
+                |                 
+                p Wallet
+            // Category
+            .category.col-lg-2.col-md-2.col-sm-4.col-xs-6
+              a(href='#')
+                img(src='img/categories/1.png', alt='1')
+                |                 
+                p Gloves
+            // Category
+            .category.col-lg-2.col-md-2.col-sm-4.col-xs-6
+              a(href='#')
+                img(src='img/categories/1.png', alt='1')
+                |                 
+                p City bag
+            // Category
+            .category.col-lg-2.col-md-2.col-sm-4.col-xs-6
+              a(href='#')
+                img(src='img/categories/1.png', alt='1')
+                |                 
+                p Backpack
+            // Category
+            .category.col-lg-2.col-md-2.col-sm-4.col-xs-6
+              a(href='#')
+                img(src='img/categories/1.png', alt='1')
+                |                 
+                p Belts
+      // Categories Close
+      // Catalog Grid
+      section.catalog-grid
+        .container
+          h2.dark-color Catalog picks
+          |           
+          .row
+            // Tile
+            .col-lg-3.col-md-4.col-sm-6
+              .tile
+                .badges
+                  span.sale Sale
+                |               &#x9;
+                .price-label 715,00 $
+                |               &#x9;
+                a(href='#')
+                  img(src='img/catalog/1.png', alt='1')
+                  |                   
+                  span.tile-overlay
+                |                 
+                .footer
+                  a(href='#') Smart Backpack
+                  |                   
+                  span by David Banks
+                  |                   
+                  button.btn.btn-primary Add to Cart
+            // Tile
+            .col-lg-3.col-md-4.col-sm-6
+              .tile
+                .badges
+                  span.out Out
+                |               &#x9;
+                .price-label 715,00 $
+                |                 
+                .price-label.old-price 920,00 $
+                |               &#x9;
+                a(href='#')
+                  img(src='img/catalog/1.png', alt='1')
+                  |                   
+                  span.tile-overlay
+                |                 
+                .footer
+                  a(href='#') Two-tone leather shopper
+                  |                   
+                  span by Andy Shooter
+                  |                   
+                  button.btn.btn-primary Add to Cart
+            // Tile
+            .col-lg-3.col-md-4.col-sm-6
+              .tile
+                .badges
+                  span.best-seller Best Seller
+                |               &#x9;
+                .price-label 715,00 $
+                |               &#x9;
+                a(href='#')
+                  img(src='img/catalog/1.png', alt='1')
+                  |                   
+                  span.tile-overlay
+                |                 
+                .footer
+                  a(href='#') Gussetted shopper bag
+                  |                   
+                  span by Choper Bar
+                  |                   
+                  button.btn.btn-primary Add to Cart
+            // Tile
+            .col-lg-3.col-md-4.col-sm-6
+              .tile
+                .price-label 715,00 $
+                |               &#x9;
+                a(href='#')
+                  img(src='img/catalog/1.png', alt='1')
+                  |                   
+                  span.tile-overlay
+                |                 
+                .footer
+                  a(href='#') Mini shopper
+                  |                   
+                  span by David Choper
+                  |                   
+                  button.btn.btn-primary Add to Cart
+            // Tile
+            .col-lg-3.col-md-4.col-sm-6
+              .tile
+                .price-label 715,00 $
+                |               &#x9;
+                a(href='#')
+                  img(src='img/catalog/1.png', alt='1')
+                  |                   
+                  span.tile-overlay
+                |                 
+                .footer
+                  a(href='#') Shopper with buckle
+                  |                   
+                  span by Ivan Tookle
+                  |                   
+                  button.btn.btn-primary Add to Cart
+            // Tile
+            .col-lg-3.col-md-4.col-sm-6
+              .tile
+                .price-label 715,00 $
+                |                 
+                .price-label.old-price 920,00 $
+                |               &#x9;
+                a(href='#')
+                  img(src='img/catalog/1.png', alt='1')
+                  |                   
+                  span.tile-overlay
+                |                 
+                .footer
+                  a(href='#') City bag
+                  |                   
+                  span by Carol Flag
+                  |                   
+                  button.btn.btn-primary Add to Cart
+            // Tile
+            .col-lg-3.col-md-4.col-sm-6
+              .tile
+                .price-label 715,00 $
+                |               &#x9;
+                a(href='#')
+                  img(src='img/catalog/1.png', alt='1')
+                  |                   
+                  span.tile-overlay
+                |                 
+                .footer
+                  a(href='#') Cheap Zip Bag
+                  |                   
+                  span by Aron Tag
+                  |                   
+                  button.btn.btn-primary Add to Cart
+            // Tile
+            .col-lg-3.col-md-4.col-sm-6
+              .tile
+                .price-label 715,00 $
+                |               &#x9;
+                a(href='#')
+                  img(src='img/catalog/1.png', alt='1')
+                  |                   
+                  span.tile-overlay
+                |                 
+                .footer
+                  a(href='#') Leather bag with side pocket
+                  |                   
+                  span by Anna Canara
+                  |                   
+                  button.btn.btn-primary Add to Cart
+      // Catalog Grid Close
+      // Tabs Widget
+      section.tabs-widget
+        // Nav tabs
+        ul.nav.nav-tabs
+          li.active
+            a(href='#bestsel', data-toggle='tab') Bestseller items
+          |           
+          li
+            a(href='#onsale', data-toggle='tab') Items on sale
+        |         
+        .tab-content
+          #bestsel.tab-pane.fade.in.active
+            .container
+              .row
+                .col-lg-7.col-md-7.col-sm-7
+                  a.media-link(href='#')
+                    .overlay
+                      .descr
+                        div
+                          | Product Name
+                          span $14.95
+                    |                     
+                    img(src='img/media/1.jpg', alt='1')
+                |               &#x9;
+                .col-lg-5.col-md-5.col-sm-5
+                  a.media-link(href='#')
+                    .overlay
+                      .descr
+                        div
+                          | Product Name
+                          span $19.40
+                    |                     
+                    img(src='img/media/2.jpg', alt='2')
+              |               
+              .row
+                .col-lg-4.col-md-4.col-sm-4
+                  a.media-link(href='#')
+                    .overlay
+                      .descr
+                        div
+                          | Product Name
+                          span $24.15
+                    |                     
+                    img(src='img/media/3.jpg', alt='3')
+                |               &#x9;
+                .col-lg-5.col-md-5.col-sm-5
+                  a.media-link(href='#')
+                    .overlay
+                      .descr
+                        div
+                          | Product Name
+                          span $24.15
+                    |                     
+                    img(src='img/media/4.jpg', alt='4')
+                |               &#x9;
+                .col-lg-3.col-md-3.col-sm-3
+                  a.media-link(href='#')
+                    .overlay
+                      .descr
+                        div
+                          | Product Name
+                          span $24.15
+                    |                     
+                    img(src='img/media/5.jpg', alt='5')
+          |           
+          #onsale.tab-pane.fade
+            .container
+              .row
+                .col-lg-6.col-md-6.col-sm-6
+                  a.media-link(href='#')
+                    .overlay
+                      .descr
+                        div
+                          | Product Name
+                          span $14.95
+                    |                     
+                    img(src='img/media/6.jpg', alt='1')
+                |               &#x9;
+                .col-lg-6.col-md-6.col-sm-6
+                  a.media-link(href='#')
+                    .overlay
+                      .descr
+                        div
+                          | Product Name
+                          span $19.40
+                    |                     
+                    img(src='img/media/6.jpg', alt='2')
+              |               
+              .row
+                .col-lg-6.col-md-6.col-sm-6
+                  a.media-link(href='#')
+                    .overlay
+                      .descr
+                        div
+                          | Product Name
+                          span $24.15
+                    |                     
+                    img(src='img/media/6.jpg', alt='3')
+                |               &#x9;
+                .col-lg-6.col-md-6.col-sm-6
+                  a.media-link(href='#')
+                    .overlay
+                      .descr
+                        div
+                          | Product Name
+                          span $24.15
+                    |                     
+                    img(src='img/media/6.jpg', alt='4')
+      // Tabs Widget Close
+      // Posts/Twitter Widget
+      section.posts-widget
+        .tw-bg
+        |         
+        .container
+          .row
+            .latest-posts.col-lg-8.col-md-8
+              .row
+                .col-lg-3
+                  h2.extra-bold Latests posts
+                  |                   
+                  a.btn.btn-black.btn-block(href='#') To blog
+                |                 
+                .col-lg-9
+                  // Post
+                  .post.row
+                    .col-lg-6.col-sm-6
+                      a(href='#')
+                        img(src='img/posts-widget/1.jpg', alt='1')
+                    |                     
+                    .col-lg-6.col-sm-6
+                      h3
+                        a(href='#') An interesting post
+                      |                       
+                      p
+                        | Write a blog to share with customers interesting facts about your products. Make them curious and you&apos;ll get co-operation. Just try it!
+                      |                         
+                      .author
+                        i.fa.fa-user
+                        a(href='#') By Resoursa
+                      |                         
+                      .comments
+                        i.fa.fa-comment
+                        a(href='#') Comments (34)
+                  // Post End
+                  // Post
+                  .post.row
+                    .col-lg-6.col-sm-6
+                      a(href='#')
+                        img(src='img/posts-widget/1.jpg', alt='2')
+                    |                     
+                    .col-lg-6.col-sm-6
+                      h3
+                        a(href='#') Review post
+                      |                       
+                      p
+                        | You probably know that giving more details is the best way to provide info about a product. Write reviews, take high-quality pictures, and that will definitely boost the sales.
+                      |                         
+                      .author
+                        i.fa.fa-user
+                        a(href='#') By Jeddah
+                      |                         
+                      .comments
+                        i.fa.fa-comment
+                        a(href='#') Comments (101)
+                  // Post End
+            |             
+            .twitter-feed.col-lg-4.col-md-4
+              a.tw-follow(href='https://twitter.com/8Guild', target='_blank')
+                .button
+                  | Follow us
+                  i.fa.fa-twitter
+                |                 
+                h2.extra-bold
+                  | On Twitter 
+                  i.fa.fa-twitter
+              // Tweet
+              .tweet
+                a(href='#') @Resoursa
+                |                 
+                p.p-style3 Uberly impressed with the AMAZING support I constantly get from awesome!!!
+                |                 
+                .group
+                  .actions
+                    a(href='#') Reply
+                    |                     
+                    a(href='#') Retweet
+                    |                     
+                    a(href='#') Favorite
+                  |                   
+                  span.date 5 Mar 2014
+              // Tweet Close
+              // Tweet
+              .tweet
+                a(href='#') @Resoursa
+                |                 
+                p.p-style3 Uberly impressed with the AMAZING support I constantly get from awesome!!!
+                |                 
+                .group
+                  .actions
+                    a(href='#') Reply
+                    |                     
+                    a(href='#') Retweet
+                    |                     
+                    a(href='#') Favorite
+                  |                   
+                  span.date 5 Mar 2014
+              // Tweet Close
+      // Gallery Widget
+      section.white-bg.gallery-widget
+        .container
+          h2 Product gallery
+          |           
+          .filters
+            a.active(href='#', data-group='all') All
+            |             
+            a(href='#', data-group='City bags') City bags
+            |             
+            a(href='#', data-group='Gloves') Gloves
+            |             
+            a(href='#', data-group='Belts') Belts
+            |             
+            a(href='#', data-group='video') Clutch
+          |           
+          .gallery-grid
+            // Item
+            .gallery-item(data-groups='["City bags"]', data-src='img/gallery-widget/1.jpg')
+              a(href='img/gallery-widget/1.jpg')
+                .overlay
+                  span
+                    i.icon-expand
+                |                 
+                img(src='img/gallery-widget/1.jpg', alt='1')
+            // Item
+            .gallery-item(data-groups='["City bags"]', data-src='img/gallery-widget/2.jpg')
+              a(href='img/gallery-widget/2.jpg')
+                .overlay
+                  span
+                    i.icon-expand
+                |                 
+                img(src='img/gallery-widget/2.jpg', alt='2')
+            // Item
+            .gallery-item(data-groups='["video"]', data-src='https://www.youtube.com/watch?v=AZ3AVR7VnqA')
+              a(href='https://www.youtube.com/watch?v=hdEAWW7tZSA')
+                .overlay
+                  span
+                    i.icon-music-play
+                |                 
+                img(src='img/gallery-widget/5.jpg', alt='3')
+            // Item
+            .gallery-item(data-groups='["Belts"]', data-src='img/gallery-widget/4.jpg')
+              a(href='img/gallery-widget/4.jpg')
+                .overlay
+                  span
+                    i.icon-expand
+                |                 
+                img(src='img/gallery-widget/4.jpg', alt='4')
+            // Item
+            .gallery-item(data-groups='["Gloves"]', data-src='img/gallery-widget/5.jpg')
+              a(href='img/gallery-widget/5.jpg')
+                .overlay
+                  span
+                    i.icon-expand
+                |                 
+                img(src='img/gallery-widget/5.jpg', alt='5')
+            // Item
+            .gallery-item(data-groups='["Gloves"]', data-src='img/gallery-widget/5.jpg')
+              a(href='img/gallery-widget/5.jpg')
+                .overlay
+                  span
+                    i.icon-expand
+                |                 
+                img(src='img/gallery-widget/5.jpg', alt='6')
+      // Gallery Widget Close
+      // Brands Carousel Widget
+      section.brand-carousel
+        .container
+          h2 Brands in our shop
+          |           
+          .inner
+            a.item(href='#')
+              img(src='img/brands/1.png', alt='1')
+            |             
+            a.item(href='#')
+              img(src='img/brands/1.png', alt='1')
+            |             
+            a.item(href='#')
+              img(src='img/brands/1.png', alt='1')
+            |             
+            a.item(href='#')
+              img(src='img/brands/1.png', alt='1')
+            |             
+            a.item(href='#')
+              img(src='img/brands/1.png', alt='1')
+            |             
+            a.item(href='#')
+              img(src='img/brands/1.png', alt='1')
+            |             
+            a.item(href='#')
+              img(src='img/brands/1.png', alt='1')
+      // Brands Carousel Close
+    // Page Content Close
+    // Sticky Buttons
+    .sticky-btns
+      form.quick-contact.ajax-form(method='post', name='quick-contact')
+        h3 Contact us
+        |         
+        p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
+        |         
+        .form-group
+          label(for='qc-name') Full name
+          |           
+          input#qc-name.form-control.input-sm(type='text', name='name', placeholder='Enter full name')
+        |         
+        .form-group
+          label(for='qc-email') Email
+          |           
+          input#qc-email.form-control.input-sm(type='email', name='email', placeholder='Enter email')
+        |         
+        .form-group
+          label(for='qc-message') Your message
+          |           
+          textarea#qc-message.form-control.input-sm(name='message', placeholder='Enter your message')
+        // Validation Response
+        .response-holder
+        // Response End
+        input.btn.btn-black.btn-sm.btn-block(type='submit', value='Send')
+      |       
+      span#qcf-btn
+        i.fa.fa-envelope
+      |       
+      span#scrollTop-btn
+        i.fa.fa-chevron-up
+    // Sticky Buttons Close
+    // Subscription Widget
+    section.subscr-widget.gray-bg
+      .container
+        .row
+          .col-lg-7.col-md-8.col-sm-8
+            h2 Subscribe to our news
+            |             
+            form.subscr-form(role='form', autocomplete='off')
+              .form-group
+                label.sr-only(for='subscr-name') Enter name
+                |                 
+                input#subscr-name.form-control(type='text', name='subscr-name', placeholder='Enter name', required='')
+                |                 
+                button.subscr-next
+                  i.icon-arrow-right
+              |               
+              .form-group.fff(style='display: none')
+                label.sr-only(for='subscr-email') Enter email
+                |                 
+                input#subscr-email.form-control(type='email', name='subscr-email', placeholder='Enter email', required='')
+                |                 
+                button#subscr-submit(type='submit')
+                  i.icon-check
+            |             
+            p.p-style2 Please fill the field before continuing
+          |           
+          .col-lg-4.col-md-4.col-sm-4.col-lg-offset-1
+            p.p-style3
+              | Get more followers. In case of high quality newsletters the customers return rate can increase up to 20%! Have you already estimated your possible income? We took that into account and created a decent subscription form.
+    // Subscription Widget Close
+    // Footer
+    footer.footer
+      .container
+        .row
+          .col-lg-5.col-md-5.col-sm-5
+            .info
+              a.logo(href='index.html')
+                img(src='img/logo-footer.png', alt='Limo')
+              |               
+              p
+                | Describe the mission of your online store and the advantages a customer can get once he makes a purchase. If you have something to tell let customers know about it.
+              |               
+              .social
+                a(href='#', target='_blank')
+                  i.fa.fa-instagram
+                |               &#x9;
+                a(href='#', target='_blank')
+                  i.fa.fa-youtube-square
+                |               &#x9;
+                a(href='#', target='_blank')
+                  i.fa.fa-tumblr-square
+                |               &#x9;
+                a(href='#', target='_blank')
+                  i.fa.fa-vimeo-square
+                |               &#x9;
+                a(href='#', target='_blank')
+                  i.fa.fa-pinterest-square
+                |               &#x9;
+                a(href='#', target='_blank')
+                  i.fa.fa-facebook-square
+          |           
+          .col-lg-4.col-md-4.col-sm-4
+            h2 Latest news
+            |             
+            ul.list-unstyled
+              li
+                | 25 of May 
+                a(href='#') new arrivals in Spring
+              |               
+              li
+                | 24 of April 
+                a(href='#') 5 facts about clutches
+              |               
+              li
+                | 25 of May 
+                a(href='#') new arrivals in Spring
+              |             &#x9;
+              li
+                | 24 of April 
+                a(href='#') 5 facts about clutches
+          |           
+          .contacts.col-lg-3.col-md-3.col-sm-3
+            h2 Contacts
+            |             
+            p.p-style3
+              | 4120 Lenox Avenue, New York, NY,
+              br
+              |               10035 76 Saint Nicholas Avenue
+              br
+              |               
+              a(href='mailto:mail@Limo.com') mail@Limo.com
+              br
+              |               +48 543765234
+              br
+              |               +48 555 234 54 34
+              br
+        |         
+        .copyright
+          .row
+            .col-lg-7.col-md-7.col-sm-7
+              p
+                | &copy; 2014 Limo. All Rights Reserved. Designed by 
+                a(href='http://8guild.com/', target='_blank') 8Guild
+            |           &#x9;
+            .col-lg-5.col-md-5.col-sm-5
+              .payment
+                img(src='img/payment/visa.png', alt='Visa')
+                |                 
+                img(src='img/payment/paypal.png', alt='PayPal')
+                |                 
+                img(src='img/payment/master.png', alt='Master Card')
+                |                 
+                img(src='img/payment/discover.png', alt='Discover')
+                |                 
+                img(src='img/payment/amazon.png', alt='Amazon')
+    // Footer Close
+    // Javascript (jQuery) Libraries and Plugins
+    script(src='js/libs/jquery-1.11.1.min.js')
+    | &#x9;&#x9;
+    script(src='js/libs/jquery-ui-1.10.4.custom.min.js')
+    |     
+    script(src='js/libs/jquery.easing.min.js')
+    | &#x9;&#x9;
+    script(src='js/plugins/bootstrap.min.js')
+    | &#x9;&#x9;
+    script(src='js/plugins/smoothscroll.js')
+    | &#x9;&#x9;
+    script(src='js/plugins/jquery.validate.min.js')
+    | &#x9;&#x9;
+    script(src='js/plugins/icheck.min.js')
+    | &#x9;&#x9;
+    script(src='js/plugins/jquery.placeholder.js')
+    | &#x9;&#x9;
+    script(src='js/plugins/jquery.stellar.min.js')
+    | &#x9;&#x9;
+    script(src='js/plugins/jquery.touchSwipe.min.js')
+    | &#x9;&#x9;
+    script(src='js/plugins/jquery.shuffle.min.js')
+    |     
+    script(src='js/plugins/lightGallery.min.js')
+    |     
+    script(src='js/plugins/owl.carousel.min.js')
+    |     
+    script(src='js/plugins/masterslider.min.js')
+    | &#x9;&#x9;
+    script(src='mailer/mailer.js')
+    | &#x9;&#x9;
+    script(src='js/scripts.js')
+  // Body Close

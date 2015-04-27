@@ -91,6 +91,10 @@ var source = {
         files : ['jade/views/*.jade', 'jade/views/**/*.jade', ignored_files],
         watch: ['jade/views/**/*.jade']
     },
+    front: {
+        files : ['jade/front/*.jade', 'jade/front/**/*.jade', ignored_files],
+        watch: ['jade/front/**/*.jade']
+    },
     pages: {
         files : ['jade/pages/*.jade'],
         watch: ['jade/pages/*.jade']
@@ -127,6 +131,7 @@ var build = {
   templates: {
     app: '..',
     views: '../app/views',
+    front: '../app/front',
     pages: '../app/pages'
   }
 };
@@ -312,6 +317,25 @@ gulp.task('templates:views', function() {
         ;
 });
 
+// JADE
+gulp.task('templates:front', function() {
+    return gulp.src(source.templates.front.files)
+        .pipe(changed(build.templates.front, { extension: '.html' }))
+        .pipe(jade())
+        .on("error", handleError)
+        .pipe(prettify({
+            indent_char: ' ',
+            indent_size: 3,
+            unformatted: ['a', 'sub', 'sup', 'b', 'i', 'u']
+        }))
+        // .pipe(htmlify({
+        //     customPrefixes: ['ui-']
+        // }))
+        // .pipe(w3cjs( W3C_OPTIONS ))
+        .pipe(gulp.dest(build.templates.front))
+        ;
+});
+
 //---------------
 // WATCH
 //---------------
@@ -326,6 +350,7 @@ gulp.task('watch', function() {
   gulp.watch(source.bootstrap.watch,         ['styles:app']); //bootstrap
   gulp.watch(source.templates.pages.watch,   ['templates:pages']);
   gulp.watch(source.templates.views.watch,   ['templates:views']);
+  gulp.watch(source.templates.front.watch,   ['templates:front']);
   gulp.watch(source.templates.app.watch,     ['templates:app']);
 
   gulp.watch([
@@ -374,6 +399,7 @@ gulp.task('start',[
           'templates:app',
           'templates:pages',
           'templates:views',
+          'templates:front',
           'watch'
         ]);
 

@@ -1,0 +1,11 @@
+meta(charset='utf-8')
+meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+
+meta(name='description', content='{{front.description}}')
+meta(name='keywords', content='app, responsive, angular, bootstrap, dashboard, admin')
+
+title(data-ng-bind="::pageTitle()") Angle - Angular Bootstrap Admin Template
+
+link(rel='stylesheet', href='app/css/front.css', data-ng-if="!front.layout.isRTL")
+link(rel='stylesheet', href='app/css/front-rtl.css', data-ng-if="front.layout.isRTL")
+link(rel='stylesheet', ng-href='{{front.layout.theme}}', data-ng-if="front.layout.theme")
