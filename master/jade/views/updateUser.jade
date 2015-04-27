@@ -1,118 +1,118 @@
-h3 Add New Product
+h3 Update A Exist User
 // START panel
-.panel.panel-default
-    .panel-body
-      form.form-horizontal(method='get', ng-controller="FormDemoCtrl")
-        fieldset
-          .form-group
-            label.col-sm-2.control-label 产品名称:
-            .col-sm-10
-              input.form-control(type='text')
-        fieldset
-          .form-group
-            label.col-sm-2.control-label(for='input-id-1') 产品数量:
-            .col-sm-10
-              input#input-id-1.form-control(type='text')
-        fieldset
-          .form-group
-            label.col-sm-2.control-label(for='input-id-1') 产品成本:
-            .col-sm-10
-              input#input-id-1.form-control(type='text' placeholder='美元')
-        fieldset
-          .form-group
-            label.col-sm-2.control-label(for='input-id-1') 产品价格:
-            .col-sm-10
-              input#input-id-1.form-control(type='text' placeholder='人民币')
-        fieldset  
-          .form-group
-            label.col-sm-2.control-label(for='input-id-1') 产品类目:
-            .col-sm-10
-              select#input-id-1.form-control(name='category')
-                option 婴幼儿
-                option 护肤
-                option 服装
-                option 电子
-        fieldset  
-          .form-group
-            label.col-sm-2.control-label(for='input-id-1') 产品品牌:
-            .col-sm-10
-              select#input-id-1.form-control(name='brand')
-                option 美赞臣
-                option 雅培
-                option ChildLife
-                option 加州宝宝
+//- .panel.panel-default
+//-     .panel-body
+//-       form.form-horizontal(method='get', ng-controller="FormDemoCtrl")
+//-         fieldset
+//-           .form-group
+//-             label.col-sm-2.control-label 产品名称:
+//-             .col-sm-10
+//-               input.form-control(type='text')
+//-         fieldset
+//-           .form-group
+//-             label.col-sm-2.control-label(for='input-id-1') 产品数量:
+//-             .col-sm-10
+//-               input#input-id-1.form-control(type='text')
+//-         fieldset
+//-           .form-group
+//-             label.col-sm-2.control-label(for='input-id-1') 产品成本:
+//-             .col-sm-10
+//-               input#input-id-1.form-control(type='text' placeholder='美元')
+//-         fieldset
+//-           .form-group
+//-             label.col-sm-2.control-label(for='input-id-1') 产品价格:
+//-             .col-sm-10
+//-               input#input-id-1.form-control(type='text' placeholder='人民币')
+//-         fieldset  
+//-           .form-group
+//-             label.col-sm-2.control-label(for='input-id-1') 产品类目:
+//-             .col-sm-10
+//-               select#input-id-1.form-control(name='category')
+//-                 option 婴幼儿
+//-                 option 护肤
+//-                 option 服装
+//-                 option 电子
+//-         fieldset  
+//-           .form-group
+//-             label.col-sm-2.control-label(for='input-id-1') 产品品牌:
+//-             .col-sm-10
+//-               select#input-id-1.form-control(name='brand')
+//-                 option 美赞臣
+//-                 option 雅培
+//-                 option ChildLife
+//-                 option 加州宝宝
 
-        fieldset
-          .form-group
-            label.col-sm-2.control-label Tags input
-              .text-sm.text-muted Type and press Enter
-            .col-sm-10
-              input.form-control(type='text', tagsinput, ng-value="cities.join(',')", ng-model="cities") 
-              span.help-block Values: 
-                code {{cities}}
+//-         fieldset
+//-           .form-group
+//-             label.col-sm-2.control-label Tags input
+//-               .text-sm.text-muted Type and press Enter
+//-             .col-sm-10
+//-               input.form-control(type='text', tagsinput, ng-value="cities.join(',')", ng-model="cities") 
+//-               span.help-block Values: 
+//-                 code {{cities}}
 
-        fieldset
-          .form-group
-            label.col-sm-2.control-label 图片1
-            .col-sm-10
-              input.form-control(filestyle="", type='file', data-classbutton='btn btn-default', data-classinput="form-control inline")
-        fieldset
-          .form-group
-            label.col-sm-2.control-label 图片2
-            .col-sm-10
-              input.form-control(filestyle="", type='file', data-classbutton='btn btn-default', data-classinput="form-control inline")
+//-         fieldset
+//-           .form-group
+//-             label.col-sm-2.control-label 图片1
+//-             .col-sm-10
+//-               input.form-control(filestyle="", type='file', data-classbutton='btn btn-default', data-classinput="form-control inline")
+//-         fieldset
+//-           .form-group
+//-             label.col-sm-2.control-label 图片2
+//-             .col-sm-10
+//-               input.form-control(filestyle="", type='file', data-classbutton='btn btn-default', data-classinput="form-control inline")
 
-        fieldset
-          .form-group
-            label.col-sm-2.control-label 图片3
-            .col-sm-10
-              input.form-control(filestyle="", type='file', data-classbutton='btn btn-default', data-classinput="form-control inline")
-        fieldset
-          .form-group
-            label.col-sm-2.control-label 图片4
-            .col-sm-10
-              input.form-control(filestyle="", type='file', data-classbutton='btn btn-default', data-classinput="form-control inline")
-        fieldset
-          .form-group
-            label.col-sm-2.control-label 图片5
-            .col-sm-10
-              input.form-control(filestyle="", type='file', data-classbutton='btn btn-default', data-classinput="form-control inline")
-        fieldset
-        .form-group
-          label.col-sm-2.control-label 简要商品描述(微博 微信 social 推广)
-          .col-sm-10
-            script(type='text/ng-template', id="ng-wig/views/ng-wig.html")
-              .ng-wig
-                .btn-group.btn-group-sm.wd-wide
-                  button.btn.btn-sm.btn-default(type='button', title='Header', ng-click="execCommand('formatblock', '<h1>')")
-                    em.fa.fa-header
-                  button.btn.btn-sm.btn-default(type='button', title='Paragraph', ng-click="execCommand('formatblock', '<p>')")
-                    em.fa.fa-paragraph
-                  button.btn.btn-sm.btn-default(type='button', title='Unordered List', ng-click="execCommand('insertunorderedlist')")
-                    em.fa.fa-list-ul
-                  button.btn.btn-sm.btn-default(type='button', title='Ordered List', ng-click="execCommand('insertorderedlist')")
-                    em.fa.fa-list-ol
-                  button.btn.btn-sm.btn-default(type='button', title='Bold', ng-click="execCommand('bold')")
-                    em.fa.fa-bold
-                  button.btn.btn-sm.btn-default(type='button', title='Italic', ng-click="execCommand('italic')")
-                    em.fa.fa-italic
-                  button.btn.btn-sm.btn-default(type='button', title='link', ng-click="execCommand('createlink')")
-                    em.fa.fa-link
-                  button.pull-right.btn.btn-sm.btn-default(type='button', title="Edit Html" ng-class="{ 'nw-button--active': editMode }", ng-click='toggleEditMode()')
-                    em.fa.fa-pencil
-                .nw-editor
-                  textarea.nw-editor__src(ng-show="editMode", ng-model="content") 
-                  iframe.nw-editor__res(scrolling="{{ autoexpand ? 'no' : 'yes' }}", frameBorder="0", ng-hide="editMode", ng-model="content", ng-wig-editable='')
-            textarea(ng-wig="wysiwygContent") 
-        fieldset
-          .form-group
-            label.col-sm-2.control-label 商品详细描述
-            .col-sm-10
-              // Wysiswyg editor
-              .btn-group-small(text-angular='', ng-model='htmlContent', name='wysiswyg-editor')
-        fieldset
-          .form-group
-            .col-sm-4.col-sm-offset-2
-              button.btn.btn-default(type='submit') Cancel
-              button.btn.btn-primary(type='submit') Save changes
+//-         fieldset
+//-           .form-group
+//-             label.col-sm-2.control-label 图片3
+//-             .col-sm-10
+//-               input.form-control(filestyle="", type='file', data-classbutton='btn btn-default', data-classinput="form-control inline")
+//-         fieldset
+//-           .form-group
+//-             label.col-sm-2.control-label 图片4
+//-             .col-sm-10
+//-               input.form-control(filestyle="", type='file', data-classbutton='btn btn-default', data-classinput="form-control inline")
+//-         fieldset
+//-           .form-group
+//-             label.col-sm-2.control-label 图片5
+//-             .col-sm-10
+//-               input.form-control(filestyle="", type='file', data-classbutton='btn btn-default', data-classinput="form-control inline")
+//-         fieldset
+//-         .form-group
+//-           label.col-sm-2.control-label 简要商品描述(微博 微信 social 推广)
+//-           .col-sm-10
+//-             script(type='text/ng-template', id="ng-wig/views/ng-wig.html")
+//-               .ng-wig
+//-                 .btn-group.btn-group-sm.wd-wide
+//-                   button.btn.btn-sm.btn-default(type='button', title='Header', ng-click="execCommand('formatblock', '<h1>')")
+//-                     em.fa.fa-header
+//-                   button.btn.btn-sm.btn-default(type='button', title='Paragraph', ng-click="execCommand('formatblock', '<p>')")
+//-                     em.fa.fa-paragraph
+//-                   button.btn.btn-sm.btn-default(type='button', title='Unordered List', ng-click="execCommand('insertunorderedlist')")
+//-                     em.fa.fa-list-ul
+//-                   button.btn.btn-sm.btn-default(type='button', title='Ordered List', ng-click="execCommand('insertorderedlist')")
+//-                     em.fa.fa-list-ol
+//-                   button.btn.btn-sm.btn-default(type='button', title='Bold', ng-click="execCommand('bold')")
+//-                     em.fa.fa-bold
+//-                   button.btn.btn-sm.btn-default(type='button', title='Italic', ng-click="execCommand('italic')")
+//-                     em.fa.fa-italic
+//-                   button.btn.btn-sm.btn-default(type='button', title='link', ng-click="execCommand('createlink')")
+//-                     em.fa.fa-link
+//-                   button.pull-right.btn.btn-sm.btn-default(type='button', title="Edit Html" ng-class="{ 'nw-button--active': editMode }", ng-click='toggleEditMode()')
+//-                     em.fa.fa-pencil
+//-                 .nw-editor
+//-                   textarea.nw-editor__src(ng-show="editMode", ng-model="content") 
+//-                   iframe.nw-editor__res(scrolling="{{ autoexpand ? 'no' : 'yes' }}", frameBorder="0", ng-hide="editMode", ng-model="content", ng-wig-editable='')
+//-             textarea(ng-wig="wysiwygContent") 
+//-         fieldset
+//-           .form-group
+//-             label.col-sm-2.control-label 商品详细描述
+//-             .col-sm-10
+//-               // Wysiswyg editor
+//-               .btn-group-small(text-angular='', ng-model='htmlContent', name='wysiswyg-editor')
+//-         fieldset
+//-           .form-group
+//-             .col-sm-4.col-sm-offset-2
+//-               button.btn.btn-default(type='submit') Cancel
+//-               button.btn.btn-primary(type='submit') Save changes
 // END panel

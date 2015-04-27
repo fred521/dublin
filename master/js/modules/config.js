@@ -262,6 +262,12 @@ function ($stateProvider, $locationProvider, $urlRouterProvider, helper) {
         templateUrl: helper.basepath('listDin.html'),
         resolve: helper.resolveFor('codemirror', 'moment', 'taginput','inputmask','localytics.directives', 'ui.bootstrap-slider', 'ngWig', 'filestyle', 'textAngular', 'textAngularSetup')
     })
+    .state('app.new-address', {
+        url: '/newAddress',
+        title: 'Add A New Address',
+        templateUrl: helper.basepath('newAddress.html'),
+        resolve: helper.resolveFor('codemirror', 'moment', 'taginput','inputmask','localytics.directives', 'ui.bootstrap-slider', 'ngWig', 'filestyle', 'textAngular', 'textAngularSetup')
+    })
     .state('app.form-validation', {
         url: '/form-validation',
         title: 'Form Validation',

@@ -1,0 +1,81 @@
+h3 Add New Address
+
+
+  .row
+    fieldset
+    .col-lg-4
+        .form-group
+          label.col-sm-4.control-label 国家
+          .col-sm-8
+            select.form-control(name='account')
+              option 中国
+    .col-lg-4
+        .form-group
+          label.col-sm-4.control-label 省份
+          .col-sm-8
+            select.form-control(name='account')
+              option 浙江
+              option 广东
+    .col-lg-4
+        .form-group
+          label.col-sm-4.control-label 市(区)
+          .col-sm-8
+            select.form-control(name='account')
+              option 温州
+              option 宁波
+  .row
+    fieldset
+    .col-lg-8
+      .form-group
+        label.col-lg-2.control-label 收货地址
+        .col-lg-10
+          input.form-control(type='text', placeholder='城/乡/街道')
+    .col-lg-4
+      .form-group
+        label.col-lg-2.control-label 邮编
+        .col-lg-10
+          input.form-control(type='text', placeholder='邮编')
+  br
+  .row
+    fieldset
+      .col-lg-12
+        .form-group
+          button.mb-sm.btn.btn-primary(type='button') 增加地址
+          button.mb-sm.btn.btn-primary(type='button') 修改地址
+
+
+  // Editable row
+  h4.page-header List Address
+
+.row
+  fieldset
+  .form-group
+    label.col-sm-2.control-label 
+      | 选择默认地址:
+    .col-sm-10
+      .radio.c-radio.c-radio-nofont
+        label
+          input(type='radio', name='a', value='option1')
+          span
+          |  地址1
+      .radio.c-radio.c-radio-nofont
+        label
+          input(type='radio', name='a', value='option2', checked='')
+          span
+          |  地址2
+      .radio.c-radio.c-radio-nofont
+        label
+          input(type='radio', name='a', value='option2', checked='')
+          span
+          |  地址3
+      .radio.c-radio.c-radio-nofont
+        label
+          input(type='radio', name='a', value='option2', checked='')
+          span
+          |  地址4
+.row
+   fieldset
+        .form-group
+          .col-sm-4.col-sm-offset-10
+            button.btn.btn-default(type='submit') Cancel
+            button.btn.btn-primary(type='submit') 保存

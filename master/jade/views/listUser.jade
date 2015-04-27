@@ -11,14 +11,15 @@ h3 List Product
           table#datatable2.table.table-striped.table-hover
             thead
               tr
-                th 产品名称
-                th.sort-numeric 价格
-                th 访问量
-                th.sort-numeric 数量
+                th 用户名
+                th 邮箱
+                th IP
+                th 姓名
+                th 手机
                 th 状态
-                th 产品Code
-                th 品牌
-                th Location
+                th 创建时间
+                th 最近登陆
+                th 负责人
             tbody
               tr.gradeX
                 td Trident
@@ -29,6 +30,7 @@ h3 List Product
                 td X
                 td X
                 td hangzhou
+                td weiwei
             tfoot
               tr
                 th
@@ -41,6 +43,8 @@ h3 List Product
                   input.form-control.input-sm.datatable_input_col_search(type='text', name='filter_platform', placeholder='Filter Platform')
                 th
                   input.form-control.input-sm.datatable_input_col_search(type='text', name='filter_engine_version', placeholder='Filter Engine version')
+                th
+                  input.form-control.input-sm.datatable_input_col_search(type='text', name='filter_css_grade', placeholder='Filter CSS grade')
                 th
                   input.form-control.input-sm.datatable_input_col_search(type='text', name='filter_css_grade', placeholder='Filter CSS grade')
                 th
